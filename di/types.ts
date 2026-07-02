@@ -11,5 +11,14 @@ export const TYPES = {
      * 演習 8-4 Serviceの実装とDIコンテナへの登録
      */
     IUserRepository: Symbol.for("IUserRepository"),
-    IRegisterUserService: Symbol.for("IRegisterUserService")
+    IRegisterUserService: Symbol.for("IRegisterUserService"),
+           /**
+     * 演習 8-9 リポジトリの実装を作成する
+     */
+    IBookCategoryRepository: Symbol.for("IBookCategoryRepository"),
+    /* 演習 8-10 商品登録サービスを実装してDIコンテナに登録する
+     */
+    IRegisterBookService: Symbol.for("IRegisterBookService")
+    
+        
 };

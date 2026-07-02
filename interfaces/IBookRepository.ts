@@ -1,3 +1,4 @@
+import { BookRegistration } from "@/models/BookRegistration";
 import { Book } from "../models/Book";
 /**
  * 演習 6-2 データアクセスとサービスを実装する
@@ -10,4 +11,17 @@ export interface IBookRepository {
      * @returns 検索にヒットした商品のリスト（非同期）
      */
     searchKeyword(keyword: string): Promise<Book[]>;
+    /**
+     * 演習 8-8 リポジトリとDTOインターフェイスを実装する
+     * 商品の重複を検証する
+     * @param name 検証する商品名
+     */
+    existsByName(title: string): Promise<void>;
+    /**
+     * 演習 8-8 リポジトリとDTOインターフェイスを実装する
+     * 商品を登録する
+     * @param book 登録する商品
+     * @returns 登録された商品（非同期）
+     */
+    register(book: BookRegistration): Promise<Book>;
 }
